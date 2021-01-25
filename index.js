@@ -1,9 +1,9 @@
-const  XBOT = 'AMPIBI'; // Nama Bot Whatsapp
-const instagram = 'https://instagram.com/affis_saputro123'; // Nama Instagramlu cok
-const nomer = 'https://Wa.me/+6282334297175'; // Nomor whatsapplu cok
-const aktif = 'Tergantung kuota'; // Kapan bot lu aktif
+const  XBOT = 'PATRICK BOT'; // Na
+const instagram = 'https://instagram.com/ptrck.star_'; // Nama Instagramlu cok
+const nomer = 'https://Wa.me/+6282384183539'; // Nomor whatsapplu cok
+const aktif = 'Tergantung Mood'; // Kapan bot lu aktif
 const groupwa = 'comming soon'; // OFFICIAL GRUP LU 1
-const youtube = 'https://youtube.com/channel/UCYKxsg7iF9a9IZyXQRNsvqw'; 
+const youtube = 'https://youtube.com/channel/UC1CWCwEbKUENhtH-P9VTs9w'; 
 const qrcode = require("qrcode-terminal");
 const moment = require("moment");
 const cheerio = require("cheerio");
@@ -23,7 +23,7 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:affis\n' // full name
             + 'ORG:Owner  XBOT Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid=6282384183539:+62 823-8418-3539\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 
 const
@@ -77,7 +77,7 @@ conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @affis_saputro123`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @ptrck.star_`)
 })
 
 conn.on('message-new', async(m) =>
@@ -119,7 +119,7 @@ conn.sendMessage(id ,`${gg} ${exists ? " exists " : " does not exist"} on WhatsA
 }
 
 else if (text == 'assalamualaikum'){
-conn.sendMessage(id, '3aalaikumsalam, Ketik #menu/#info/#donasi Contoh #menu' ,MessageType.text);
+conn.sendMessage(id, 'waalaikumsalam, Ketik #menu/#info/#donasi Contoh #menu' ,MessageType.text);
 }
 else if (text == 'salam'){
 conn.sendMessage(id, 'Waalaikumsalam, Ketik #menu/#info/#donasi Contoh #menu' ,MessageType.text);
@@ -143,10 +143,10 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '#owner'){
-conn.sendMessage(id, 'Owner XBOT wa.me/+6282334297175' ,MessageType.text);
+conn.sendMessage(id, 'wa.me/+6282384183539' ,MessageType.text);
 }
-else if (text == 'affis'){
-conn.sendMessage(id, 'Aku BOT nya XBOT' ,MessageType.text);
+else if (text == 'patrick'){
+conn.sendMessage(id, 'A' ,MessageType.text);
 }
 else if (text == 'audio'){
 conn.sendMessage(id, 'pacar owner ihh' ,MessageType.text);
@@ -155,7 +155,7 @@ else if (text == 'bangsat'){
 conn.sendMessage(id, 'toxic terdeteksi' ,MessageType.text);
 }
 else if (text == 'Ngentod'){
-conn.sendMessage(id, 'Pengin ngentod?' ,MessageType.text);
+conn.sendMessage(id, 'Pengen ngentod?' ,MessageType.text);
 }
 else if (text == 'Anjing'){
 conn.sendMessage(id, 'Jangan toxic anjing' ,MessageType.text);
@@ -322,7 +322,7 @@ var gh = text.split("#quotemaker ")[1];
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses🔍 silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image, { caption: 'Nih Anjim', quoted: m })
+            conn.sendMessage(id, buf, MessageType.image, { caption: 'Nih Gan', quoted: m })
         })
     })
 }
@@ -453,12 +453,12 @@ axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
 else if (text == '#opengc'){
 let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, false);
-conn.sendMessage(id, 'SUCCES, GRUP TELAH DIBUKA' ,MessageType.text, { quoted: m } );
+conn.sendMessage(id, 'SUCCESS, GRUP TELAH DIBUKA' ,MessageType.text, { quoted: m } );
 }
 else if (text == '#closegc'){
  let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, true);
-conn.sendMessage(id, 'SUCCES, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
+conn.sendMessage(id, 'SUCCESS, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
 }
 if (text.includes('#textimage')){
 const teks = text.replace(/#textimage /, "")
